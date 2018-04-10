@@ -1,0 +1,8 @@
+<br />
+<b>Deprecated</b>:  Function eregi() is deprecated in <b>/www/web/ico.55.la/html/down_icon.php</b> on line <b>9</b><br />
+<br />
+<b>Notice</b>:  Use of undefined constant ico - assumed 'ico' in <b>/www/web/ico.55.la/html/down_icon.php</b> on line <b>17</b><br />
+<br />
+<b>Warning</b>:  filesize(): stat failed for /home/web/uploadico.55.la/html/upload/ico/2018/03/27/00/5a0ceed40001528605400300_1522111901.ico in <b>/www/web/ico.55.la/html/down_icon.php</b> on line <b>19</b><br />
+<br />
+<b>Warning</b>:  readfile(/home/web/uploadico.55.la/html/upload/ico/2018/03/27/00/5a0ceed40001528605400300_1522111901.ico): failed to open stream: No such file or directory in <b>/www/web/ico.55.la/html/down_icon.php</b> on line <b>25</b><br />
