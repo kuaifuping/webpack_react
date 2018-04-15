@@ -1,1 +1,4 @@
 /react_webpack/node_modules
+/react_webpack/.idea
+/node_modules
+/.idea
