@@ -49,6 +49,7 @@ const config = webpackMerge(webpackBase, {
     })
   ]
 })
+console.log(isDev)
 if (isDev) {
   config.entry = {
     app: [

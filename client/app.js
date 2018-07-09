@@ -4,13 +4,15 @@ import { BrowserRouter } from 'react-router-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'mobx-react'
 import App from './views/App'
-import appState from './store/app-state'
+import AppState from './store/app-state'
+
+const initialState = window.__INITIAL__STATE__ || {} // eslint-disable-line
 // ReactDOM.hydrate(<App />,document.getElementById("root"));
 const root = document.getElementById('root')
 const render = (Component) => {
   ReactDOM.hydrate(
     <AppContainer>
-      <Provider appState={appState}>
+      <Provider appState={new AppState(initialState.appState)}>
         <BrowserRouter >
           <Component />
         </BrowserRouter>
@@ -19,6 +21,7 @@ const render = (Component) => {
     , root,
   )
 }
+
 render(App);
 if (module.hot) {
   module.hot.accept('./views/App.jsx', () => {
