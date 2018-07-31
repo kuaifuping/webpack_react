@@ -1,0 +1,104 @@
+2.你真的了解webpack？
+  3.creat-reatc-app创建reat项目
+  4.为什么在不刷新页面情况下展示修改后的代码
+  5.为什么可以在js中require js  css  image 等非js的东西呢？
+1.你会使用服务端渲染？
+  数据同步 路由跳转 seo信息
+   方便服务端渲染reat代码调试
+   reat+reat-touter+mobx
+
+3.模块化工具
+seajs CMD
+requirejs AMD
+现在都用node中的commonjs
+4.多页应用
+页面都是由服务器端生成
+跳转都要经过服务器端
+js只能做做动画
+4.单页应用
+所有的内容由前端生成
+js更多的处理业务逻辑代码，后端提供api
+路由跳转不经过后端
+5.常用类库
+vue
+react
+angular
+backbone
+6.架构工具
+npm 统治地位
+bowser
+jspm
+7.模块化工具
+webpck 统治地位
+rollup 打包效率比wepack高，
+browserify  用的人少
+8.静态文件
+可以直接在js代码中进行引用，并且交给模块化工具转化成为线上可以用的静态资源，并且
+可以定制转化过程适应不同的应用场景
+9.其他考虑
+浏览器兼容
+  很差的浏览器只能选择比较老的框架
+  tob的（商用的）还是toc（交互）
+  移动端还是pc端
+10.工程架构
+  解放生产力：源代码预处理 自动打包页面自动更新 （css in js） 自动图片依赖
+  围绕解决方案搭建环境：不同前端框架需要不同的运行架构 jsx；预期可能出现的问题并规避
+  保证代码质量：code lint；不同环境间排除差异editconfnig；gitcommit预处理
+  工程定制
+11.项目架构：网页如何运行
+  技术选型：mobx
+  数据解决方案
+  整体的代码风格：那些数据该存在react当前页面 ，那些存在mobx
+12.web开发中床用的常用的优化
+   合并资源文件，减少http请求
+   压缩资源文件减少请求大小
+   利用缓存机制，尽可能使用缓存减少请求
+webpack的基础配置
+1.webpack打包的基础loader****
+
+2.目录结构
+build ：配置文件
+client：前端文件
+  服务器端渲染的基础配置
+1.为什么会出现服务器端渲染
+  seo不友好
+  首次请求等待时间比较长，不友好
+2.web提供了react-dom  服务器端：react-dom/server
+fs:异步读取文件  express：
+
+项目开发中用的的配置
+  webpack Dev server：webpack提供的文件服务，一旦编译的文件发生变化，这个时候重新编译
+  hot module replacement：文件发生变化是无刷新的显示
+
+  react-hot-loader实现热加载配置
+  appContainner
+  webpack.hotModuleReplacementPlugin
+  修改开发模式入口：react-hot-loader/patch
+  配置publicPath:"/public/":后面要加斜杠，否则会影响hot module repalacement功能
+
+开发时候的服务端渲染
+  memory-fs:在内存中读写文件
+  webpack(sererconfig):创建一个编译器，监听（watch）entry下的打包文件的变化，一当有变化重新打包
+  http-proxy-middleware :服务端渲染代理获取webpack-dev-server打静态文件
+eslint editconfiger
+  eslint-loader  eslint-config-airbnb  babel-eslint
+
+项目的基本目录结构
+1.views存放项目功能模块页面，需要根据路由情况分割子级目录
+2、config存放配置文件，比如第三方类库引用，路由跳转
+3、store存放数据管理信息
+4、componnents非业务组件，公用组件
+
+路由配置：区分不同功能模块地址；
+
+store的配置：
+前端数据流，flux单向数据流，数据存储的地方就叫做store
+mobx: observable computed action authorun inject
+
+cnodejs的api调用和调试：
+body-parser：输出的内容装换为json格式 express-session ：存放服务端session query-string：查询字符串转json
+
+
+服务端渲染：
+
+
