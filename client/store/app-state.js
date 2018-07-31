@@ -12,7 +12,7 @@ export default class AppState {
   @observable count
   @observable name
   @computed get msg() {
-    return `${this.name} say count stash8 is ${this.count}`
+    return `${this.name} say count stash12 is ${this.count}`
   }
   @action add() {
     this.count += 7
